@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { iBlog } from '../../blog.model';
 import { BlogService } from '../../services/blog.service';
 
@@ -9,12 +10,16 @@ import { BlogService } from '../../services/blog.service';
 })
 export class BlogListComponent implements OnInit {
 
+  constructor(private blogService: BlogService, private router: Router, private route: ActivatedRoute) { }
+
+  
   public loading: boolean = false;
   public blogs: iBlog[] = [];
   public errorMessage: string | null = null;
 
-
-  constructor(private blogService: BlogService) { }
+  commandBarAction(event:string){
+      this.router.navigate(['blog/' + event]);
+  }
 
    ngOnInit(): void {
     this.loading = true;
@@ -27,5 +32,4 @@ export class BlogListComponent implements OnInit {
     });
 
     }
-
 }

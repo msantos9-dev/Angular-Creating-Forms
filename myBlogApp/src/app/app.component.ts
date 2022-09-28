@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -9,11 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AppComponent {
   title = 'myBlogApp';
 
-  constructor(private router: Router) { }
+  constructor() { }
 
-hasRoute(route: string){
-  return this.router.url.includes(route);
-}
 }
 
 

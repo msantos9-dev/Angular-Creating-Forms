@@ -8,20 +8,25 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CommandBarComponent implements OnInit {
 
-  @Output() addEmitter = new EventEmitter(); 
+  @Output() cbEmitter = new EventEmitter(); 
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
-   
+  commandBarEmitAdd(){
+    this.cbEmitter.emit('add');
   }
 
-  add(){
-      this.addEmitter.emit(this.route.snapshot.params);
-      if(this.router.url.includes('book')){
-          this.router.navigate(['book/add']);
-      }else{
-        this.router.navigate(['blog/add']);
-      }
+  commandBarEmitDeleteAll(){
+    this.cbEmitter.emit('deleteAll');
   }
+
+  ngOnInit(): void { }
+  // add(){
+  //     this.addEmitter.emit(this.route.snapshot.params);
+  //     if(this.router.url.includes('book')){
+  //         this.router.navigate(['book/add']);
+  //     }else{
+  //       this.router.navigate(['blog/add']);
+  //     }
+  // }
 }

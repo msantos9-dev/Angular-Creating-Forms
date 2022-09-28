@@ -11,6 +11,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import { SharedModule } from '../shared/shared.module';
+import { BlogRoutingModule } from './blog-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import {MatSelectModule} from '@angular/material/select';
   ],
   imports: [
     CommonModule, 
-    ReactiveFormsModule, FormsModule,
+    ReactiveFormsModule, FormsModule, SharedModule,
+    BlogRoutingModule,
     
     MatFormFieldModule,  MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatSelectModule
   ],
