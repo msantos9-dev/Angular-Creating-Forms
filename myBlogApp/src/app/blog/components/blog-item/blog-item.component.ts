@@ -1,7 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
 import { iBlog } from '../../blog.model';
-import { BlogService } from '../../services/blog.service';
 
 @Component({
   selector: 'app-blog-item',
@@ -23,9 +21,6 @@ export class BlogItemComponent implements OnInit {
     this.deleteBlogEmitter.emit(blogId);
   }
 
-  ngOnInit(): void {
-
-  }
-
+  ngOnInit(): void {}
 
 }

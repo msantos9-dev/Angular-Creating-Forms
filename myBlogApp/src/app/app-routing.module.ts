@@ -6,6 +6,7 @@ const routes: Routes = [
 {path : '', redirectTo: 'blog/admin', pathMatch : 'full'},
 {path : 'blog',  loadChildren:() => import('./blog/blog.module').then(m=>m.BlogModule)},
 {path : 'book',  loadChildren:() => import('./book/book.module').then(m=>m.BookModule)},
+{path : 'profile',  loadChildren:() => import('./user/user.module').then(m=>m.UserModule)},
 ];
 
 @NgModule({

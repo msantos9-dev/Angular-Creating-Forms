@@ -19,10 +19,9 @@ export class BlogFormComponent implements OnInit {
   
   constructor(private formBuilder: FormBuilder, private router: Router, private blogService:BlogService, private activatedRoute:ActivatedRoute) { }
 
-
   ngOnInit() {
     this.blogForm = this.formBuilder.group({
-    
+
       title: ['', Validators.required],
       description: ['', Validators.required],
       author: ['', Validators.required],
@@ -36,7 +35,11 @@ export class BlogFormComponent implements OnInit {
     if(this.blogId){
       this.loading = true;
       this.blogService.getBlog(this.blogId).subscribe((data)=> {
-        this.blog = data;
+        //this.blog = data;
+        this.blogForm.get("title")?.setValue(data.title);
+        this.blogForm.get("description")?.setValue(data.description);
+        this.blogForm.get("author")?.setValue(data.author);
+        this.blogForm.get("comments")?.setValue(data.comments);
         this.loading = false;
       },(error) => {
         this.errorMessage = error;
@@ -80,10 +83,4 @@ export class BlogFormComponent implements OnInit {
   hasRoute(route: string){
     return this.router.url.includes(route);
   }
-
 }
-
-
-// <mat-error *ngIf="blogForm.controls['comments'].touched && blogForm.controls['comments'].invalid">
-//           <span *ngIf="blogForm.controls['comments'].errors?.['required']">This field is mandatory.</span>
-//         </mat-error>

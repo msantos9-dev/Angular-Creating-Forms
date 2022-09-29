@@ -52,6 +52,6 @@ export class BlogService {
     }else{
       errorMessage = `Status: ${error.status} \n Message: ${error.message}`; 
     }
-    return throwError(errorMessage);
+    return throwError(() => new Error(errorMessage));
   }
 }

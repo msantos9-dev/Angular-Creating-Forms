@@ -15,13 +15,13 @@
 
 <div class="example-container">
   <div class="form-container">
-    <form [formGroup]="blogForm" (submit)="submit()">
+    <form [formGroup]="blogForm" (ngSubmit)="submit()">
       <h1 *ngIf="hasRoute('add')" class ="title">Add Blog</h1>
       <h1 *ngIf="hasRoute('edit')" class ="title">Edit Blog</h1>
 
       <mat-form-field class="form-field" appearance="outline">
         <mat-label> Title </mat-label>
-        <input matInput formControlName="title" required [value]="blog.title">
+        <input matInput name ="title" id="title" formControlName="title" required >
         <mat-error *ngIf="blogForm.controls['title'].touched && blogForm.controls['title'].invalid">
           <span *ngIf="blogForm.controls['title'].errors?.['required']">This field is mandatory.</span>
         </mat-error>
@@ -29,7 +29,7 @@
 
       <mat-form-field class="form-field" appearance="outline">
         <mat-label>Type description here</mat-label>
-        <textarea matInput placeholder="Ex. This blog is about .........." formControlName="description" required [value]="blog.description"></textarea>
+        <textarea matInput placeholder="Ex. This blog is about .........." formControlName="description" required></textarea>
         <mat-error *ngIf="blogForm.controls['description'].touched && blogForm.controls['description'].invalid">
           <span *ngIf="blogForm.controls['description'].errors?.['required']">This field is mandatory.</span>
         </mat-error>
@@ -37,7 +37,7 @@
 
       <mat-form-field class="form-field" appearance="outline">
         <mat-label> Author </mat-label>
-        <input matInput formControlName="author" required [value]="blog.author">
+        <input matInput formControlName="author" required >
         <mat-error *ngIf="blogForm.controls['author'].touched && blogForm.controls['author'].invalid">
           <span *ngIf="blogForm.controls['author'].errors?.['required']">This field is mandatory.</span>
         </mat-error>
@@ -47,7 +47,7 @@
 
       <mat-form-field class="form-field" appearance="outline">
         <mat-label>Comments here</mat-label>
-        <textarea matInput placeholder="Ex. This blog is .........." formControlName="comments" required [value]="blog.comments"></textarea>
+        <textarea matInput placeholder="Ex. This blog is .........." formControlName="comments" ></textarea>
         <mat-error *ngIf="blogForm.controls['comments'].touched && blogForm.controls['comments'].invalid">
           <span *ngIf="blogForm.controls['comments'].errors?.['required']">This field is mandatory.</span>
         </mat-error>
@@ -57,9 +57,9 @@
       <button mat-raised-button color="primary" type="submit">Submit</button>
     </form>
     <!-- <div>{{ blogForm.value | json }}</div>-->
-    {{ blogForm.value | json }}
+   
   </div>
 </div>
 
 <!--<pre>{{blog | json}}</pre> -->
-<pre>{{blog | json}}</pre>
+

@@ -10,6 +10,7 @@ import { BookModule } from './book/book.module';
 import { CommandBarComponent } from './shared/component/command-bar/command-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule } from '@angular/common/http';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BlogModule,
     BookModule,
+    UserModule,
     BrowserAnimationsModule,
     HttpClientModule
   ],

@@ -46,6 +46,5 @@ export class BlogListComponent implements OnInit {
       this.errorMessage = error;
       this.loading = false;
     });
-
     }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { iBook } from '../../book.models';
 import { BookService } from '../../services/book.service';
@@ -11,7 +11,7 @@ import { BookService } from '../../services/book.service';
 })
 export class BookFormComponent implements OnInit {
 
-  bookForm!: FormGroup;
+  public bookForm!: FormGroup;
   public loading: boolean = false;
   public bookId: any |null = null;
   public book: iBook = {} as iBook;
@@ -19,15 +19,16 @@ export class BookFormComponent implements OnInit {
   
   constructor(private formBuilder: FormBuilder, private router: Router, private bookService:BookService, private activatedRoute:ActivatedRoute) { }
 
+  addAuthor() {
+    
+  }
 
   ngOnInit() {
     this.bookForm = this.formBuilder.group({
-    
       name: ['', Validators.required],
-      authors: ['', Validators.required],
+      authors: [[], Validators.required],
       isbn: ['', Validators.required],
       image: ['', Validators.required],
-
     });
     
     this.activatedRoute.paramMap.subscribe((param) => {
@@ -37,7 +38,12 @@ export class BookFormComponent implements OnInit {
     if(this.bookId){
       this.loading = true;
       this.bookService.getBook(this.bookId).subscribe((data)=> {
-        this.book = data;
+        //this.book = data;
+        this.bookForm.get("name")?.setValue(data.name);
+        this.bookForm.get("authors")?.setValue(data.authors);
+        this.bookForm.get("isbn")?.setValue(data.isbn);
+        this.bookForm.get("image")?.setValue(data.image);
+
         this.loading = false;
       },(error) => {
         this.errorMessage = error;

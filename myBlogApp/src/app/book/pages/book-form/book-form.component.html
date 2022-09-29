@@ -21,7 +21,7 @@
 
       <mat-form-field class="form-field" appearance="outline">
         <mat-label> Book Title </mat-label>
-        <input matInput formControlName="name" required [value]="book.name">
+        <input matInput formControlName="name" name="name" id ="name" required>
         <mat-error *ngIf="bookForm.controls['name'].touched && bookForm.controls['name'].invalid">
           <span *ngIf="bookForm.controls['name'].errors?.['required']">This field is mandatory.</span>
         </mat-error>
@@ -29,7 +29,7 @@
 
       <mat-form-field class="form-field" appearance="outline">
         <mat-label> Authors </mat-label>
-        <input matInput formControlName="authors" required [value]="book.authors">
+        <input matInput formControlName="authors" name="authors" id ="authors" required >
         <mat-error *ngIf="bookForm.controls['authors'].touched && bookForm.controls['authors'].invalid">
           <span *ngIf="bookForm.controls['authors'].errors?.['required']">This field is mandatory.</span>
         </mat-error>
@@ -37,7 +37,7 @@
 
       <mat-form-field class="form-field" appearance="outline">
         <mat-label> ISBN </mat-label>
-        <input matInput formControlName="isbn" required [value]="book.isbn">
+        <input matInput formControlName="isbn" name="isbn" id ="isbn" required >
         <mat-error *ngIf="bookForm.controls['isbn'].touched && bookForm.controls['isbn'].invalid">
           <span *ngIf="bookForm.controls['isbn'].errors?.['required']">This field is mandatory.</span>
         </mat-error>
@@ -45,7 +45,7 @@
 
       <mat-form-field class="form-field" appearance="outline">
         <mat-label> Image Link </mat-label>
-        <input matInput formControlName="image" required [value]="book.image">
+        <input matInput formControlName="image" name="image" id ="image" required >
         <mat-error *ngIf="bookForm.controls['image'].touched && bookForm.controls['image'].invalid">
           <span *ngIf="bookForm.controls['image'].errors?.['required']">This field is mandatory.</span>
         </mat-error>

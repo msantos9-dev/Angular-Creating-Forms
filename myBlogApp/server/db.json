@@ -1,7 +1,6 @@
 {
   "blogs": [
     {
-      "id": 1,
       "title": "'Say Yes'",
       "description": "'Say Yes is an award-winning blog created by Liz Stanley in 2006. Although it could be classified as a mom blog as well, since Liz is a mother of three, it goes beyond that, offering useful advice about other topics, including food, and travel.'",
       "author": "Liz Stanley",
@@ -10,7 +9,8 @@
         "comment 2",
         "comment 3",
         "comment 4"
-      ]
+      ],
+      "id": 1
     },
     {
       "id": 2,
@@ -70,22 +70,13 @@
   ],
   "books": [
     {
-      "id": 1,
       "name": "'1000 Years of Joys and Sorrows'",
       "authors": [
         "Ai Weiwei"
       ],
       "isbn": "0553419463",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/51ttp1m0o7L._SX327_BO1,204,203,200_.jpg"
-    },
-    {
-      "id": 2,
-      "name": "'Acts of Desperation'",
-      "authors": [
-        "Megan Nolan"
-      ],
-      "isbn": "0316429856",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/41phwHkJthL._SX329_BO1,204,203,200_.jpg"
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51ttp1m0o7L._SX327_BO1,204,203,200_.jpg",
+      "id": 1
     },
     {
       "id": 3,
@@ -140,13 +131,6 @@
       ],
       "isbn": "979-8555486158",
       "image": "https://images-na.ssl-images-amazon.com/images/I/41CD4dlZN-L._SX331_BO1,204,203,200_.jpg"
-    },
-    {
-      "name": "'It Starts with Us: A Novel (2) (It Ends with Us)'",
-      "authors": "Colleen Hoover ",
-      "isbn": "1668001225",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/51VC+Vru96L._SX320_BO1,204,203,200_.jpg",
-      "id": 9
     }
   ]
 }
