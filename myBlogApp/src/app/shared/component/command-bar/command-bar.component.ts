@@ -21,12 +21,5 @@ export class CommandBarComponent implements OnInit {
   }
 
   ngOnInit(): void { }
-  // add(){
-  //     this.addEmitter.emit(this.route.snapshot.params);
-  //     if(this.router.url.includes('book')){
-  //         this.router.navigate(['book/add']);
-  //     }else{
-  //       this.router.navigate(['blog/add']);
-  //     }
-  // }
+
 }

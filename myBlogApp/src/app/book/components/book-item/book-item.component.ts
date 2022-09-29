@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { iBook } from '../../book.models';
+import { BookService } from '../../services/book.service';
 
 @Component({
   selector: 'app-book-item',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookItemComponent implements OnInit {
 
-  constructor() { }
+  @Input() book?: iBook | undefined;
+  @Output() bookDeleteEmitter = new EventEmitter();
+  
+  public loading: boolean = false;
+  public books: iBook[] = [];
+  public errorMessage: string | null = null;
+
+  deleteBook(bookId: any){
+    this.bookDeleteEmitter.emit(bookId);
+  }
+
+  constructor() {}
 
   ngOnInit(): void {
+
   }
 
 }

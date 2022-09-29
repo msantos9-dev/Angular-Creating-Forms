@@ -75,8 +75,6 @@ export class BlogFormComponent implements OnInit {
         }
       }
     }
-    
-    
   }
 
   hasRoute(route: string){

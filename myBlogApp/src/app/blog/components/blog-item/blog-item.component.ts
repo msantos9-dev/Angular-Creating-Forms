@@ -11,31 +11,21 @@ import { BlogService } from '../../services/blog.service';
 export class BlogItemComponent implements OnInit {
 
   @Input() blog?: iBlog | undefined;
+  @Output() deleteBlogEmitter = new EventEmitter
   
   public loading: boolean = false;
   public blogs: iBlog[] = [];
   public errorMessage: string | null = null;
 
-  constructor(private blogService:BlogService, private router: Router) {}
+  constructor() {}
+  
+  public deleteBlog(blogId: any) {
+    this.deleteBlogEmitter.emit(blogId);
+  }
 
   ngOnInit(): void {
 
   }
 
-  public deleteBlog(blogId: any) {
-      if(blogId){
-        this.blogService.deleteBlog(blogId).subscribe((data) => {
-          this.loading = true;
-          this.blogService.getAllBlogs().subscribe((data) => {
-            this.blogs = data;
-            window.location.reload()
-            this.loading = false;
-          },(error) => {
-            this.errorMessage = error;
-            this.loading = false;
-          });
-        });
-      }
-  }
 
 }

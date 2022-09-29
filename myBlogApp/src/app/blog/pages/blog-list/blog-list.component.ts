@@ -21,6 +21,22 @@ export class BlogListComponent implements OnInit {
       this.router.navigate(['blog/' + event]);
   }
 
+  deleteBlog(event:any){
+    if(event){
+      this.blogService.deleteBlog(event).subscribe((data) => {
+        this.loading = true;
+        this.blogService.getAllBlogs().subscribe((data) => {
+          this.blogs = data;
+          window.location.reload()
+          this.loading = false;
+        },(error) => {
+          this.errorMessage = error;
+          this.loading = false;
+        });
+      });
+    }
+  }
+
    ngOnInit(): void {
     this.loading = true;
     this.blogService.getAllBlogs().subscribe((data) => {

@@ -68,70 +68,85 @@
       "id": 6
     }
   ],
-
   "books": [
     {
-        "id" : 1,
-        "name" : "'1000 Years of Joys and Sorrows'",
-        "authors" : ["Ai Weiwei"],
-        "isbn" :  "0553419463",
-        "image" : "https://images-na.ssl-images-amazon.com/images/I/51ttp1m0o7L._SX327_BO1,204,203,200_.jpg"
-      },
-  
-      {
-        "id" : 2,
-        "name" : "'Acts of Desperation'",
-        "authors" : ["Megan Nolan"],
-        "isbn" :  "0316429856",
-        "image" : "https://images-na.ssl-images-amazon.com/images/I/41phwHkJthL._SX329_BO1,204,203,200_.jpg"
-      },
-  
-      {
-        "id" : 3,
-        "name" : "'A Certain Hunger'",
-        "authors" : ["Chelsea G. Summers"],
-        "isbn" :  "1951213432",
-        "image" : "https://images-na.ssl-images-amazon.com/images/I/51uTDxhnRdS._SX322_BO1,204,203,200_.jpg"
-      },
-  
-      {
-        "id" : 4,
-        "name" : "'The Latinist: A Novel'",
-        "authors" : ["Mark Prins"],
-        "isbn" :  "132403680X",
-        "image" : "https://images-na.ssl-images-amazon.com/images/I/41blJc0JSCL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg"
-      },
-  
-      {
-        "id" : 5,
-        "name" : "'Imposter'",
-        "authors" : ["Bradeigh Godfrey"],
-        "isbn" :  "1665055189",
-        "image" : "https://images-na.ssl-images-amazon.com/images/I/41B-Kx02w+L._SX311_BO1,204,203,200_.jpg"
-      },
-  
-      {
-        "id" : 6,
-        "name" : "'Toxic Effects (Memory Thieves Series, Book 2)'",
-        "authors" : ["Joel Shulkin"],
-        "isbn" :  "1094022888",
-        "image" : "https://images-na.ssl-images-amazon.com/images/I/41GrevUbxSL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg"
-      },
-  
-      {
-        "id" : 7,
-        "name" : "'Livid: A Scarpetta Novel (Kay Scarpetta, 26)'",
-        "authors" : ["Patricia Cornwell"],
-        "isbn" :  "1538725169",
-        "image" : "https://images-na.ssl-images-amazon.com/images/I/51UCA3pQNcL._SX329_BO1,204,203,200_.jpg"
-      },
-  
-      {
-        "id" : 8,
-        "name" : "'The Assassin's Betrayal: CIA Assassin'",
-        "authors" : ["Auston King"],
-        "isbn" :  "979-8555486158",
-        "image" : "https://images-na.ssl-images-amazon.com/images/I/41CD4dlZN-L._SX331_BO1,204,203,200_.jpg"
-      }
+      "id": 1,
+      "name": "'1000 Years of Joys and Sorrows'",
+      "authors": [
+        "Ai Weiwei"
+      ],
+      "isbn": "0553419463",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51ttp1m0o7L._SX327_BO1,204,203,200_.jpg"
+    },
+    {
+      "id": 2,
+      "name": "'Acts of Desperation'",
+      "authors": [
+        "Megan Nolan"
+      ],
+      "isbn": "0316429856",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41phwHkJthL._SX329_BO1,204,203,200_.jpg"
+    },
+    {
+      "id": 3,
+      "name": "'A Certain Hunger'",
+      "authors": [
+        "Chelsea G. Summers"
+      ],
+      "isbn": "1951213432",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51uTDxhnRdS._SX322_BO1,204,203,200_.jpg"
+    },
+    {
+      "id": 4,
+      "name": "'The Latinist: A Novel'",
+      "authors": [
+        "Mark Prins"
+      ],
+      "isbn": "132403680X",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41blJc0JSCL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg"
+    },
+    {
+      "id": 5,
+      "name": "'Imposter'",
+      "authors": [
+        "Bradeigh Godfrey"
+      ],
+      "isbn": "1665055189",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41B-Kx02w+L._SX311_BO1,204,203,200_.jpg"
+    },
+    {
+      "id": 6,
+      "name": "'Toxic Effects (Memory Thieves Series, Book 2)'",
+      "authors": [
+        "Joel Shulkin"
+      ],
+      "isbn": "1094022888",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41GrevUbxSL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg"
+    },
+    {
+      "id": 7,
+      "name": "'Livid: A Scarpetta Novel (Kay Scarpetta, 26)'",
+      "authors": [
+        "Patricia Cornwell"
+      ],
+      "isbn": "1538725169",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51UCA3pQNcL._SX329_BO1,204,203,200_.jpg"
+    },
+    {
+      "id": 8,
+      "name": "'The Assassin's Betrayal: CIA Assassin'",
+      "authors": [
+        "Auston King"
+      ],
+      "isbn": "979-8555486158",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41CD4dlZN-L._SX331_BO1,204,203,200_.jpg"
+    },
+    {
+      "name": "'It Starts with Us: A Novel (2) (It Ends with Us)'",
+      "authors": "Colleen Hoover ",
+      "isbn": "1668001225",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51VC+Vru96L._SX320_BO1,204,203,200_.jpg",
+      "id": 9
+    }
   ]
 }
